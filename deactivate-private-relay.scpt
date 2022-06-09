@@ -22,7 +22,7 @@ end tell
 delay 1
 
 tell application "System Events" to tell process "System Preferences"
-    click button DEACTIVATE_BUTTON of sheet 1 of window "Identifiant Apple"
+    click button DEACTIVATE_BUTTON of sheet 1 of window WINDOW_NAME
 end tell
 
 tell application "System Preferences" to quit

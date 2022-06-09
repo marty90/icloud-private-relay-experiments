@@ -2,7 +2,7 @@
 
 WEBSITE_LIST="lists/websites.txt"
 NUM=3
-HEAD=1000
+HEAD=100
 IFACE=en31
 # Remove status with: rm -rf browsertime-results/* results-*
 
