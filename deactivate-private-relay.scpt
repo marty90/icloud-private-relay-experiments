@@ -1,5 +1,5 @@
-set WINDOW_NAME to "Identifiant Apple"
-set DEACTIVATE_BUTTON to "Désactiver le relais privé"
+set WINDOW_NAME to "Apple ID"
+set DEACTIVATE_BUTTON to "Turn Off Private Relay"
 set PRIVACY_RELAY_INDEX to 3
 
 tell application "System Preferences"
