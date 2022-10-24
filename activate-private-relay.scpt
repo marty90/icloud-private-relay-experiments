@@ -1,4 +1,4 @@
-set WINDOW_NAME to "Identifiant Apple"
+set WINDOW_NAME to "Apple ID"
 set PRIVACY_RELAY_INDEX to 3
 
 

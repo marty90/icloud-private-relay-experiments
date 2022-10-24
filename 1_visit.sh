@@ -1,9 +1,9 @@
 #!/bin/bash
 
-WEBSITE_LIST="lists/websites.txt"
+WEBSITE_LIST="lists/test.txt"
 NUM=3
 HEAD=100
-IFACE=en31
+IFACE=en0
 # Remove status with: rm -rf browsertime-results/* results-*
 
 # No Privacy Relay
@@ -19,7 +19,7 @@ for website in $( cat $WEBSITE_LIST | grep -v '#' | head -n $HEAD) ; do
                                                       -n 1 --viewPort=1600x1200 --prettyPrint \
                                                       --timeouts.pageLoad 30000 --timeouts.pageCompleteCheck 30000 \
                                                       --safari.diagnose
-        killall Safari
+        # killall Safari
         cp -r ~/Library/Logs/com.apple.WebDriver/$( ls -t  ~/Library/Logs/com.apple.WebDriver/ | head -1 ) results-pr/$website
     done
     cp -r browsertime-results/$website results-pr
@@ -46,7 +46,7 @@ for website in $( cat $WEBSITE_LIST | grep -v '#' | head -n $HEAD) ; do
                                                       --timeouts.pageLoad 30000 --timeouts.pageCompleteCheck 30000 \
                                                       --safari.diagnose
         
-        killall Safari
+        # killall Safari
         cp -r ~/Library/Logs/com.apple.WebDriver/$( ls -t  ~/Library/Logs/com.apple.WebDriver/ | head -1 ) results-no-pr/$website
     done
     cp -r browsertime-results/$website results-no-pr
