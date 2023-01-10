@@ -1,8 +1,15 @@
 ## iCloud Private Relay Experiments
 
-This script visits a set of websites with and without the iCloud Private Relay. It drives Safari using BrowserTime and collects various metrics from the visits. Tested on Mac OS Monterrey 12.3.1 (21E258)
+This repository contains the dataset and the code used for the paper: *"Measuring the Performance of iCloud Private Relay"*, Martino Trevisan, Idilio Drago, Paul Schmitt, Francesco Bronzino, to appear in **PAM 2023**.
+
+
+### Dataset
+
+In the `data` folder, there are the datasets we collected for the paper, that were used to create the figures and draw conclusions. They are in plain `CSV` format and can be read with any tool, including Python Pandas.
 
 ### Prerequisites
+
+The provided scripts visit a set of **websites** with and without the iCloud Private Relay. It drives Safari using BrowserTime and collects various metrics from the **visits**. Tested on Mac OS Monterrey 12.3.1 (21E258). The `curl` folder contains a simple script to record the time of **bulk HTTP downloads**. For the **Ookla speed test experiments**, we used the [PySpeedTest](https://github.com/marty90/pyspeedtest) Python library. 
 
 You need:
 * A MacOS PC with OS version Monterrey
