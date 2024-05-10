@@ -21,7 +21,6 @@ free.fr
 bfmtv.com
 news.google.com
 20minutes.fr
-ouest-france.fr
 linkedin.com
 credit-agricole.fr
 xhamster.com
@@ -98,3 +97,4 @@ zoom.us
 wlp-acs.com
 whatsapp.com
 seloger.com
+www.ouest-france.fr
