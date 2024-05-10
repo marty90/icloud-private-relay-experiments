@@ -1,14 +1,13 @@
+pinterest.com
+twitch.tv
+reddit.com
 google.com
 youtube.com
-facebook.com
 amazon.com
 yahoo.com
-twitter.com
 wikipedia.org
 zoom.us
-instagram.com
 pornhub.com
-reddit.com
 ebay.com
 netflix.com
 cnn.com
@@ -22,7 +21,6 @@ bing.com
 walmart.com
 foxnews.com
 linkedin.com
-pinterest.com
 duckduckgo.com
 microsoftonline.com
 craigslist.org
@@ -32,7 +30,6 @@ weather.com
 zillow.com
 accuweather.com
 etsy.com
-twitch.tv
 news.google.com
 usps.com
 paypal.com
@@ -98,3 +95,6 @@ blackboard.com
 capitalone.com
 messenger.com
 fanfiction.net
+facebook.com
+instagram.com
+twitter.com
