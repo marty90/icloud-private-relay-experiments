@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WEBSITE_LIST="lists/it.txt"
-NUM=3
+NUM=5
 HEAD=100
 IFACE=en0
 # Remove status with: rm -rf browsertime-results/* results-*
