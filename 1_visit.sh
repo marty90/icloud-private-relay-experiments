@@ -18,10 +18,10 @@ fi
 
 mkdir -p results-pr
 tcpdump -i $IFACE -w results-pr/capture-${RANDOM}.pcap &
-for website in $( cat $WEBSITE_LIST | grep -v '#' | head -n $HEAD) ; do
-    mkdir -p results-pr/$website
-    echo $website
-    for i in $( seq $NUM ) ; do
+for i in $( seq $NUM ) ; do
+    for website in $( cat $WEBSITE_LIST | grep -v '#' | head -n $HEAD) ; do
+        mkdir -p results-pr/$website
+        echo $website
         ~/node_modules/browsertime/bin/browsertime.js -b safari https://$website \
                                                       -n 1 --viewPort=1600x1200 --prettyPrint \
                                                       --timeouts.pageLoad 30000 --timeouts.pageCompleteCheck 30000 \
@@ -48,16 +48,14 @@ fi
 
 mkdir -p results-no-pr
 tcpdump -i $IFACE -w results-no-pr/capture-${RANDOM}.pcap &
-for website in $( cat $WEBSITE_LIST | grep -v '#' | head -n $HEAD) ; do
-
-    echo $website
-    for i in $( seq $NUM ) ; do
+for i in $( seq $NUM ) ; do
+    for website in $( cat $WEBSITE_LIST | grep -v '#' | head -n $HEAD) ; do
         mkdir -p results-no-pr/$website
+        echo $website
         ~/node_modules/browsertime/bin/browsertime.js -b safari https://$website \
                                                       -n 1 --viewPort=1600x1200 --prettyPrint \
                                                       --timeouts.pageLoad 30000 --timeouts.pageCompleteCheck 30000 \
                                                       --safari.diagnose
-        
         # killall Safari
         cp -r ~/Library/Logs/com.apple.WebDriver/$( ls -t  ~/Library/Logs/com.apple.WebDriver/ | head -1 ) results-no-pr/$website
     done
