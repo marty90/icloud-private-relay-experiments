@@ -1,8 +1,8 @@
 #!/bin/bash
 
 WEBSITE_LIST="lists/it.txt"
-NUM=1
-HEAD=1
+NUM=5
+HEAD=100
 IFACE=en0
 IS_SPEEDTEST=true
 # Remove status with: rm -rf browsertime-results/* results-*
@@ -33,7 +33,7 @@ for i in $(seq $NUM); do
     done
 
     if [[ $IS_SPEEDTEST = true ]]; then 
-        ~/PycharmProjects/.venv/bin/python <<EOF
+        python <<EOF
 from speedtest_support import run_speedtest
 
 run_speedtest(True)
@@ -71,7 +71,7 @@ for i in $(seq $NUM); do
     done
 
     if [[ $IS_SPEEDTEST = true ]]; then 
-        ~/PycharmProjects/.venv/bin/python <<EOF
+        python <<EOF
 from speedtest_support import run_speedtest
 
 run_speedtest(False)
