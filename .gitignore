@@ -2,3 +2,5 @@
 /results-no-pr
 /results-pr
 /speedtest_results
+/browsertime-results
+.venv
